@@ -1,0 +1,11 @@
+@import "variables";
+
+.web-header {
+    background: $color-orange;
+    color: $color-white;
+    padding: 10px 0px;
+    text-align: center;
+    .web-title{
+        font-size: $font-size-base;
+    }
+} 
