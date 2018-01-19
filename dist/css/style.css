@@ -52,10 +52,34 @@ table {
     margin: 0 auto; } }
 
 .board {
-  background: red;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto; }
+  background: #363636;
+  padding: 5px;
+  margin-top: 34px; }
+  .board .board-item {
+    background: #101010;
+    width: calc(100% - 15px);
+    padding: 2px;
+    margin-bottom: 3px;
+    border-radius: 3px; }
+    @media all and (min-width: 737px) {
+      .board .board-item {
+        background: white;
+        width: 200px;
+        height: 200px;
+        margin: 0 auto; } }
+    @media all and (min-width: 1026px) {
+      .board .board-item {
+        background: red;
+        width: 300px;
+        height: 300px; } }
+  .board .footer-pic {
+    padding: 3px;
+    text-align: center;
+    color: #999999; }
+
+img.desaturate {
+  filter: grayscale(100%);
+  border-radius: 3px; }
 
 .flexorder {
   display: flex;
@@ -77,9 +101,15 @@ textarea {
   box-sizing: border-box; }
 
 .web-header {
-  background: #ff5733;
+  z-index: 99;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  background: #050505;
   color: #fff;
   padding: 10px 0px;
   text-align: center; }
   .web-header .web-title {
-    font-size: 14px; }
+    font-size: 14px;
+    font: "Cabin", sans-serif; }
