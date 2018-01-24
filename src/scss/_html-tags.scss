@@ -1,4 +1,10 @@
-//body
+//@import "variables";
+
+body {
+    font-family: $main-font-family;
+    font-size: $font-size-base;
+    margin: 0 auto;
+}
 
 img,
 embed,
