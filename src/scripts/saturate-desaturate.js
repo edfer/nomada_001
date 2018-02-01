@@ -1,7 +1,6 @@
 var $ = require('jquery');
 
-$('.img').on('click', function(){
-    $(this).toggleClass('desaturate');
-    
-    
+$('.board-item').on('click', function(){
+    $(this).find('.img').toggleClass('desaturate');
+    $(this).find('.hidden').toggleClass('description'); 
 });

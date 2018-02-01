@@ -51,6 +51,13 @@ table {
     max-width: 1200px;
     margin: 0 auto; } }
 
+body .hidden {
+  display: none; }
+
+body.show-description .description {
+  display: flex;
+  transition: all 1s; }
+
 .board {
   background: #363636;
   padding: 0px;
@@ -75,18 +82,16 @@ table {
     .board .board-item .square-pic {
       padding-bottom: 0px;
       margin: 0 auto; }
-  .board .footer-pic {
-    padding: 8px;
-    text-align: center;
-    color: #363636; }
-
-.img.desaturate {
-  filter: grayscale(100%); }
-
-.img {
-  border-radius: 3px;
-  border-bottom: 1px solid #363636;
-  transition: all 0.4s; }
+      .board .board-item .square-pic .img.desaturate {
+        filter: grayscale(100%); }
+      .board .board-item .square-pic .img {
+        border-radius: 3px;
+        border-bottom: 1px solid #363636;
+        transition: 0.4s; }
+    .board .board-item .footer-pic {
+      padding: 8px;
+      text-align: center;
+      color: #363636; }
 
 .flexorder {
   display: flex;

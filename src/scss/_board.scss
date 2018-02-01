@@ -6,6 +6,22 @@
     }
 }
 
+body{
+
+    .hidden {
+        display: none;
+
+    }
+
+    &.show-description {
+
+        .description {
+            display: flex;
+            transition: all 1s;
+        }
+    }
+}
+
 .board {
     background: #363636;
     padding: 0px;
@@ -34,32 +50,28 @@
         }
 
         .square-pic {
-            
+
             padding-bottom: 0px;
             margin: 0 auto;
 
+            .img.desaturate {
+                filter: grayscale(100%);
+            }
 
+            .img {
+                border-radius: 3px;
+                border-bottom: 1px solid #363636;
+                transition: 0.4s;
+            }
+        }
+
+        .footer-pic {
+            padding: 8px;
+            text-align: center;
+            color: #363636;
         }
     }
-
-    .footer-pic {
-        padding: 8px;
-        text-align: center;
-        color: #363636;
-        
-        
-    }
 }
-
 // Photo Filters
 
-.img.desaturate {
-    filter: grayscale(100%);
-}
 
-
-.img {
-    border-radius: 3px;
-    border-bottom: 1px solid #363636;
-    transition: all 0.4s;
-}
