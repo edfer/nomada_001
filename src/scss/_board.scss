@@ -11,13 +11,21 @@ body{
     .hidden {
         display: none;
 
+        @include if-is-tablet {
+            display: flex;
+        }
+
+        @include if-is-desktop {
+            display: flex;
+        }
     }
 
     &.show-description {
 
         .description {
-            display: flex;
+            display: block;
             transition: all 1s;
+    
         }
     }
 }
@@ -26,6 +34,18 @@ body{
     background: #363636;
     padding: 0px;
     margin-top: 34px;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include if-is-tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
+    
 
     .board-item {
         background: #fff;
@@ -33,20 +53,22 @@ body{
         padding-top: 0px;
         margin-bottom: 3px;
         border-radius: 8px;
-
+        align-items: center;
 
 
         @include if-is-tablet {
             background: white;
             width: 200px;
-            height: 200px;
+            height: 100%;
             margin: 0 auto;
+
         }
 
         @include if-is-desktop {
             background: red;
             width: 300px;
-            height: 300px;
+            height: 100%;
+            margin: 0 auto;
         }
 
         .square-pic {
@@ -72,6 +94,7 @@ body{
         }
     }
 }
-// Photo Filters
+
+
 
 

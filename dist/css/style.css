@@ -53,32 +53,49 @@ table {
 
 body .hidden {
   display: none; }
+  @media all and (min-width: 737px) {
+    body .hidden {
+      display: flex; } }
+  @media all and (min-width: 1026px) {
+    body .hidden {
+      display: flex; } }
 
 body.show-description .description {
-  display: flex;
+  display: block;
   transition: all 1s; }
 
 .board {
   background: #363636;
   padding: 0px;
-  margin-top: 34px; }
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+  @media all and (min-width: 737px) {
+    .board {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around; } }
   .board .board-item {
     background: #fff;
     width: 100%;
     padding-top: 0px;
     margin-bottom: 3px;
-    border-radius: 8px; }
+    border-radius: 8px;
+    align-items: center; }
     @media all and (min-width: 737px) {
       .board .board-item {
         background: white;
         width: 200px;
-        height: 200px;
+        height: 100%;
         margin: 0 auto; } }
     @media all and (min-width: 1026px) {
       .board .board-item {
         background: red;
         width: 300px;
-        height: 300px; } }
+        height: 100%;
+        margin: 0 auto; } }
     .board .board-item .square-pic {
       padding-bottom: 0px;
       margin: 0 auto; }
@@ -92,11 +109,6 @@ body.show-description .description {
       padding: 8px;
       text-align: center;
       color: #363636; }
-
-.flexorder {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; }
 
 body {
   font-family: "Cabin", sans-serif;
