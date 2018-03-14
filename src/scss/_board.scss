@@ -6,7 +6,7 @@
     }
 }
 
-body{
+body {
 
     .hidden {
         display: none;
@@ -17,7 +17,6 @@ body{
 
         @include if-is-desktop {
             display: flex;
-
         }
     }
 
@@ -26,7 +25,6 @@ body{
         .description {
             display: block;
             transition: all 1s;
-    
         }
     }
 }
@@ -35,19 +33,17 @@ body{
     background: #363636;
     padding: 0px;
     margin-top: 34px;
-    display:flex;
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 
     @include if-is-tablet {
-        display: flex;
-        margin: 50px 50px 50px 50px;
+        display: flex; //margin: 50px 50px 50px 50px;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        
     }
-    
+
 
     .board-item {
         background: #fff;
@@ -62,19 +58,16 @@ body{
             background: #fff;
             width: 200px;
             height: 100%;
-            margin: 0 auto;
-
+            margin: 20px;
         }
 
         @include if-is-desktop {
-            background: #fff;
-            
-            margin-bottom: 0px;
+            background: #fff; //margin-bottom: 0px;
             border-radius: 0px;
             width: 400px;
             height: 100%;
             margin: 40px;
-            justify-content: space-around;
+            justify-content: space-between;
             display: flex;
             flex-flow: column nowrap;
         }
@@ -83,10 +76,20 @@ body{
 
             padding-bottom: 0px;
             margin: 0 auto;
-            padding: 10px;
+            padding: 0px;
+
 
             .img.desaturate {
                 filter: grayscale(100%);
+                @include if-is-tablet {
+                    filter: grayscale(60%)
+                }
+            }
+
+            .img.hover-color {
+                @include if-is-desktop {
+                    filter: grayscale(0%);
+                }
             }
 
             .img {
@@ -94,7 +97,7 @@ body{
                 border-bottom: 1px solid #363636;
                 transition: 0.4s;
 
-                @include if-is-desktop{
+                @include if-is-desktop {
                     border-radius: 0px;
                 }
             }
@@ -107,7 +110,3 @@ body{
         }
     }
 }
-
-
-
-
