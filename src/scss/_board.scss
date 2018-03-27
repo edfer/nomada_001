@@ -9,22 +9,32 @@
 body {
 
     .hidden {
-        display: none;
+        display: flex;
+        max-height: 0px;
+        transition: max-height 0.3s ease-out;
+        overflow: hidden;
+
 
         @include if-is-tablet {
             display: flex;
+            max-height:0px;
+            overflow: hidden;
         }
 
         @include if-is-desktop {
             display: flex;
+            max-height:100px;
+
         }
     }
 
     &.show-description {
 
         .description {
-            display: block;
-            transition: all 1s;
+            display: block; // height:100%;
+            transition: max-height 0.4s ease-out;
+            max-height: 200px;
+            overflow: hidden;
         }
     }
 }
@@ -65,8 +75,7 @@ body {
         @include if-is-desktop {
             background: #fff; //margin-bottom: 0px;
             border-radius: 0px;
-            width: 400px;
-            //height: 100%;
+            width: 400px; //height: 100%;
             //margin: 40px 0px 20px 20px;
             //justify-content: center;
             //display: flex;
@@ -79,6 +88,15 @@ body {
             margin: 0 auto;
             padding: 0px;
 
+            .img {
+                border-radius: 3px;
+                border-bottom: 1px solid #363636;
+                transition: 0.4s;
+
+                @include if-is-desktop {
+                    border-radius: 0px;
+                }
+            }
 
             .img.desaturate {
                 filter: grayscale(100%);
@@ -90,16 +108,6 @@ body {
             .img.hover-color {
                 @include if-is-desktop {
                     filter: grayscale(0%);
-                }
-            }
-
-            .img {
-                border-radius: 3px;
-                border-bottom: 1px solid #363636;
-                transition: 0.4s;
-
-                @include if-is-desktop {
-                    border-radius: 0px;
                 }
             }
         }
